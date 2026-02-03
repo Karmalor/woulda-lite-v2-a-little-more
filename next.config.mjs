@@ -7,11 +7,11 @@ const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-
-  eslint: {
-    ignoreDuringBuilds: true,
+  webpack: (config) => {
+    return config;
   },
+
+  reactStrictMode: true,
 
   images: {
     remotePatterns: NEXT_PUBLIC_SERVER_URL
