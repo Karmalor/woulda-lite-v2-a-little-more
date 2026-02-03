@@ -63,14 +63,16 @@ const CheckoutPage = async ({
   const appFee = Math.floor(amount * 0.05);
 
   return (
-    <div>
-      <div className="max-w-screen-lg mx-auto my-8 mt-24">
-        <CheckoutForm
-          productsArray={productArray.length > 0 ? (productArray as []) : []}
-          appFee={appFee}
-        />
+    <>
+      <div>
+        <div className="max-w-screen-lg mx-auto my-8 mt-24">
+          <CheckoutForm
+            productsArray={productArray.length > 0 ? (productArray as []) : []}
+            appFee={appFee}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
