@@ -3,7 +3,7 @@ import { getServerSideURL } from "./getURL";
 
 const defaultOpenGraph: Metadata["openGraph"] = {
   type: "website",
-  description: "An open-source website built with Payload and Next.js.",
+  description: "woulda.io",
   images: [
     {
       url: `${getServerSideURL()}/favicon.ico`,
@@ -14,7 +14,7 @@ const defaultOpenGraph: Metadata["openGraph"] = {
 };
 
 export const mergeOpenGraph = (
-  og?: Metadata["openGraph"]
+  og?: Metadata["openGraph"],
 ): Metadata["openGraph"] => {
   return {
     ...defaultOpenGraph,
